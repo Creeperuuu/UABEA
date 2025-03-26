@@ -34,7 +34,7 @@ jobs:
       run: cp UABEAvalonia/bin/Release/net6.0/runtimes/linux/native/libonigwrap.so UABEAvalonia/bin/Release/net6.0/runtimes/linux-x64/native/libonigwrap.so
     
     - name: Remove unused platforms
-      run: find UABEAvalonia/bin/Release/net6.0/runtimes/* -maxdepth 0 ! -name linux-x64 -type d -exec rm -r {} +
+      run: find UABEAvalonia/bin/Release/net6.0/runtimes/* -maxdepth 0 ! -name linux-arm64 -type d -exec rm -r {} +
       
     - name: Upload
       uses: actions/upload-artifact@v4
